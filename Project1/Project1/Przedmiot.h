@@ -1,6 +1,5 @@
 #ifndef Przedmiot_H
 #define Przedmiot_H
-
 #include <iostream>
 #include <string>
 #include <fstream>

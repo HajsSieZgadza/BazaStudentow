@@ -7,5 +7,5 @@ void Menu1 :: menu()
 }
 void Menu2::menu()
 {
-	cout << "1) Dodaj ocene." << endl << "2) Edytuj ocene." << endl << "3) Wyjdz" << endl;
+	cout << "1) Edytuj ocene." << endl << "2) Wyjdz" << endl;
 }

@@ -1,6 +1,7 @@
 #ifndef BazaStudentow_H
 #define BazaStudentow_H
 #include "Przedmiot.h"
+#include "Oceny.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -8,7 +9,7 @@
 #include<sstream>
 #include<iostream>
 
-class BazaStudentow : public Przedmiot
+class BazaStudentow : public Przedmiot , public Oceny
 {
 public:
 	std::vector<BazaStudentow> dane;
@@ -21,7 +22,7 @@ public:
 	void wypisz();
 	void zapisStudentow(BazaStudentow& daneStudenta, std::string nazwaPliku);
 	void nowyStudent(std::string nazwaPliku);
-	void wyszukajStudenta(std::string s);
+	void wyszukajStudenta(std::string s,std::string a,std::string b);
 
 };
 

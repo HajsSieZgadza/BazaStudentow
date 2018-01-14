@@ -17,6 +17,7 @@ int main()
 
 	baza.wczytaj(a);
 	prz.wczytaj(b);
+	oce.wczytanieOcen(c);
 	wsk = &men1;
 	wsk->menu();
 	int wybormenu;
@@ -31,7 +32,7 @@ int main()
 	break;
 	case 2:
 	{
-		baza.wyszukajStudenta(a);
+		baza.wyszukajStudenta(a,b,c);
 		wsk = &men2;
 		wsk->menu();
 		int wybormenu2;
@@ -40,12 +41,8 @@ int main()
 		{
 		case 1:
 		{
-
-			break;
-		}
-		case 2:
-		{
-
+			oce.edytowanieOcen();
+			oce.zapisOcen(oce,c);
 			break;
 		}
 		default:
@@ -60,6 +57,8 @@ int main()
 		baza.zapisStudentow(baza,a);
 		prz.dopisaniePrzedmiotow(b);
 		prz.zapisPrzedmiotow(prz, b);
+		oce.dodajOcene();
+		oce.zapisOcen(oce,c);
 	}
 	break;
 	default:

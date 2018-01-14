@@ -1,7 +1,5 @@
 #ifndef Oceny_H
 #define Oceny_H
-#include "BazaStudentow.h"
-#include "Przedmiot.h"
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -9,21 +7,19 @@
 #include <sstream>
 #include <iostream>
 
-class Oceny : public Przedmiot
+class Oceny 
 {
 public:
-	std::string ocena1="", ocena2="", ocena3="", ocena4="", ocena5="";
-	Oceny();
-	Oceny(std::string _ocena1, std::string _ocena2, std::string _ocena3, std::string _ocena4, std::string _ocena5);
-	std::vector<Oceny>oceny;
-	void wypisz();
-	void wczytaj(std::string s);
+	std::vector<Oceny> oc;
+	int id, ocena1, ocena2, ocena3, ocena4, ocena5;
+	Oceny() {};
+	Oceny(int id,int _ocena1, int _ocena2, int _ocena3, int _ocena4, int _ocena5);
+	void dodajOcene();
+	void usunOcene();
+	void wczytanieOcen(std::string s);
+	void zapisOcen(Oceny& daneStudenta, std::string nazwaPliku);
 	int ilosc();
-	void dopiszocene();
-	void zapiszOceny(Oceny& ocenyy, std::string nazwaPliku);
-	
-
-
+	void edytowanieOcen();
 };
 
 #endif
